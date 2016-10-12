@@ -12,7 +12,7 @@
 
         var plotWidth  = shape.width;
         var plotHeight = shape.height;
-        var plotMargin = shape.margin;
+        var plotMargin = shape.margin.width;
 
         var frameWidth  = plotWidth  + 2 * plotMargin + axisWidth * lines.length;
         var frameHeight = plotHeight + 2 * plotMargin;
@@ -25,11 +25,11 @@
         var xLeft = plotMargin, yTop = plotMargin;
 
         // Fill frame basic color
-        ctx.fillStyle = shape.frame.color;
+        ctx.fillStyle = shape.margin.color;
         ctx.fillRect(0, 0, frameWidth, canvas.height);
 
         // Fill plot basic color
-        ctx.fillStyle = shape.back.color;
+        ctx.fillStyle = shape.frame.color;
         ctx.fillRect(plotMargin, plotMargin, plotWidth, plotHeight);
 
         // Fill vertical grid lines
