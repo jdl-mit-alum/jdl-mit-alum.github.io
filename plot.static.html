@@ -18,23 +18,21 @@
   </style>
 
   <script type="text/javascript">
-  var plot = document.jlettvin.plot.draw;
-  var canvasName = "staticTest";
-  var shape = {
-    width:  800,
-    height: 201,              // Odd improves 0 display when signed symmetric.
-    margin:  10,
-    frame: {color:"#404040"}, // Around plot
-    grid:  {color:"#878787"}, // Within plot
-    back:  {color:"#787878"}, // Allow colors by addition and subtraction.
-    font:  {size:20, face:"Monospace"},
-  };
-  var lines = [
-    {label:canvasName, color:"#00FF00", ymin: 0, ymax:shape.height, data:[]}
-  ];
-  var dy = shape.height / shape.width;
-  for (var i=0; i<shape.width; i++) lines[0].data.push(shape.height - (dy * i));
-  (function() { plot(canvasName, lines, shape); })();
+    var plot = document.jlettvin.plot.draw;
+    var canvasName = "staticTest";
+    var shape = {
+      width:  800,
+      height: 201,              // Odd improves 0 display when signed symmetric.
+      margin:  10,
+      frame: {color:"#404040"}, // Around plot
+      grid:  {color:"#878787"}, // Within plot
+      back:  {color:"#787878"}, // Allow colors by addition and subtraction.
+      font:  {size:20, face:"Monospace"},
+    };
+    var X = shape.width, Y = shape.height, dy = Y / X;
+    var lines = [{label:canvasName, color:"#00FF00", ymin: 0, ymax:Y, data:[]}];
+    for (var x=0; x<X; x++) lines[0].data.push(Y - (dy * i));
+    (function() { plot(canvasName, lines, shape); })();
   </script>
 
 </body>
