@@ -11,7 +11,7 @@
         // Initialize defaults
         shape = shape || {width:800, height:201};
         shape.font      = shape.font || {size:20};
-        shape.frame     = shape.frame || {color:"#787878", margin:10}
+        shape.frame     = shape.frame || {color:"#787878", margin:10, mcolor:"#707070"}
         shape.grid      = shape.grid || {color:"#878787"}
         //shape.margin    = shape.margin || {width:10, color:"#707070"};
 
@@ -33,7 +33,7 @@
         var xLeft = plotMargin, yTop = plotMargin;
 
         // Fill frame basic color
-        ctx.fillStyle = shape.margin.color;
+        ctx.fillStyle = shape.frame.mcolor;
         ctx.fillRect(0, 0, frameWidth, canvas.height);
 
         // Fill plot basic color
