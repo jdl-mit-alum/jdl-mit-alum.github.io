@@ -68,7 +68,7 @@
                 ctx.strokeStyle = line.color;
                 ctx.fillStyle = line.color;
                 ctx.beginPath();
-                var xAxis = plotWidth + plotMargin * 2 + n * axisWidth + halfWidth;
+                var xAxis = plotWidth + plotMargin * 2 + n * axisWidth + 10 + halfWidth;
                 ctx.moveTo(xAxis, plotMargin);
                 ctx.lineTo(xAxis, yOffset);
                 ctx.stroke();
@@ -87,7 +87,7 @@
                 ctx.textAlign = "center";
                 // Fill label
                 ctx.font = "" + shape.font.size + "px " + shape.font.face;
-                ctx.fillText(line.label, 0, shape.font.size + dFont);
+                ctx.fillText(line.label, 0, shape.font.size + dFont + 10);
                 // Fill limits (apologies for manifest constants)
                 ctx.font = "10px " + shape.font.face;
                 ctx.fillText(line.ymax.toExponential(1), xUpper, yAxis);
