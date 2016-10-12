@@ -18,7 +18,7 @@
     var canvasName = "Dynamic Test";
     var shape = {width: 800, height: 201};
     var X = shape.width, Y = shape.height, dy = Y / X;
-    var lines = [{label:canvasName, color:"#00FF00", ymin: 0, ymax:Y, data:[]}];
+    var lines = [{label:"sin(t), color:"#00FF00", ymin: -1, ymax:+1, data:[]}];
     var x = 0;
     var update = function() {
       if (lines[0].data.length > shape.width) lines[0].data = lines[0].data.slice(1);
