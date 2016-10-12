@@ -74,13 +74,13 @@ $(document).ready(function() {
               delete blocks[keywrd];
               keywrd = match[1];
               blocks[keywrd] = "";
-              console.log(keywrd);
           } else if (line === "") {
               // Do nothing.
           } else {
               blocks[keywrd] += line + '\n';
           }
       });
+      console.log(keywrd);
       var buffer = "";
       for (key in blocks) {
           if (blocks[key] !== "") buffer += "== " + key + " ==\n" + blocks[key];
