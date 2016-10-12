@@ -7,6 +7,7 @@
 
     d.jlettvin.plot.draw = function(canvasname, lines, shape) {
         // (apologies for manifest constants)
+        shape.font.size = shape.font.size || 20;
         var axisWidth   = shape.font.size + 5 + 10;
         var halfWidth   = axisWidth / 2;
 
