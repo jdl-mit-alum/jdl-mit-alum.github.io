@@ -21,10 +21,8 @@
     var lines = [{label:canvasName, color:"#00FF00", ymin: 0, ymax:Y, data:[]}];
     var x = 0;
     var update = function() {
-      var line = lines[0];
-      if (line.data.length > shape.width) line.data = line.data.slice(1);
-      line.data.push(Math.sin(x / (5 * Math.PI)));
-      lines[0] = line;
+      if (lines[0].data.length > shape.width) lines[0].data = lines[0].data.slice(1);
+      lines[0].data.push(Math.sin(x / (5 * Math.PI)));
       plot(canvasName, lines, shape);
       setTimeout(update, 20);
     };
