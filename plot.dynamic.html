@@ -21,13 +21,14 @@
     var lines = [{label:"sin(t), color:"#00FF00", ymin: -1, ymax:+1, data:[]}];
     var x = 0;
     var update = function() {
+      x++;
       if (lines[0].data.length > shape.width) lines[0].data = lines[0].data.slice(1);
       lines[0].data.push(Math.sin(x / (5 * Math.PI)));
       plot(canvasName, lines, shape);
       setTimeout(update, 20);
     };
-    x++;
-    (function() { plot(canvasName, lines); })();
+    update();
+    //(function() { plot(canvasName, lines); })();
   </script>
 
 </body>
