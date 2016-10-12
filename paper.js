@@ -69,12 +69,9 @@ $(document).ready(function() {
       var keywrd = "_initial";
       markup.split(/\r?\n/).forEach(function(line) {
           line = line.trimRight();
-          console.log(line);
           var match;
-          if (match = line.match(/^\s*---\s+(\S*)\s+---\s*/gim)) {
-              delete blocks[keywrd];
+          if (match = line.match(/^\s*---\s+(\S*)\s+---\s*$/)) {
               keywrd = match[1];
-              console.log("!!! FOUND !!! " + keywrd);
               blocks[keywrd] = "";
           } else if (line === "") {
               // Do nothing.
@@ -82,7 +79,6 @@ $(document).ready(function() {
               blocks[keywrd] += line + '\n';
           }
       });
-      console.log(keywrd);
       var buffer = "";
       for (key in blocks) {
           if (blocks[key] !== "") buffer += "== " + key + " ==\n" + blocks[key];
