@@ -1,8 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- 11111111111111111111111111111111111111111111111111111111111111111111 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 22222222222222222222222222222222222222222222222222222222222222222222 -->
+  <title>Rod Photoreceptor Dynamic Model</title>
+
+  <!-- 33333333333333333333333333333333333333333333333333333333333333333333 -->
+  <link
+    rel="stylesheet"
+    href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link
+    rel="stylesheet"
+    href="rod.css"
+    type="text/css">
+
+  <!-- 44444444444444444444444444444444444444444444444444444444444444444444 -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js">
+  </script>
+  <script type="text/javascript">
+//requirejs.config({
+//shim: {
+    //'source1': ['dependency1','dependency2'],
+    //'source2': ['source1']
+  //}
+//});
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-1.10.2.min.js">
+  </script>
+  <script
+    src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+  </script>
+  <script
+    type="text/javascript"
+    async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <!-- 55555555555555555555555555555555555555555555555555555555555555555555 -->
+  <script type="text/javascript" src="wiki.js"></script>
+  <script type="text/javascript" src="plot.js"></script>
+  <script type="text/javascript" src="paper.js"></script>
+
 </head>
-<body>
+<body id="body">
 <h1 align="center">Autonomous modules</h1>
 <dl>
 
@@ -65,5 +111,16 @@
   </dl>
   </dd>
 </dl>
+
+
+
+  <script type="text/javascript">
+$(document).ready(function() { document.jlettvin.paper.newmain(); });
+  </script>
+
+  <form id="target"></form>
+  <object id="source" hidden="true">
+  </object>
+
 </body>
 </html>
