@@ -11,7 +11,7 @@
         // Initialize defaults
         shape = shape || {width:800, height:201};
         shape.font      = shape.font || {size:20};
-        shape.frame     = shape.grame || {color:"#787878"}
+        shape.frame     = shape.frame || {color:"#787878", margin:10}
         shape.grid      = shape.grid || {color:"#878787"}
         //shape.margin    = shape.margin || {width:10, color:"#707070"};
 
@@ -20,7 +20,7 @@
 
         var plotWidth   = shape.width;
         var plotHeight  = shape.height;
-        var plotMargin  = shape.margin.width;
+        var plotMargin  = shape.frame.margin;
 
         var frameWidth  = plotWidth  + 2 * plotMargin + axisWidth * lines.length;
         var frameHeight = plotHeight + 2 * plotMargin;
