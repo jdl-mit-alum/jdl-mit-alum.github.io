@@ -344,7 +344,7 @@ $(document).ready(function () {
         else if(c=='-') d = '<b style="text-align:left;background-color:white; color:red;">&#x2718;</b>';
         else            d = c; //""; //"&#x20de;";
         var s = line.substr(2).trim();
-        return '<tr><td>'+d+'</td><td style="background-color:white">'+s+'</td></tr>';
+        return '<tr><td>'+d+'</td><td style="text-align:left;background-color:white">'+s+'</td></tr>';
   };
 
   //___________________________________________________________________________
