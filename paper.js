@@ -65,12 +65,13 @@ $(document).ready(function() {
       target.innerHTML = framed;
       var source = document.getElementById("source");
       var markup = source.innerHTML;
-      var blocks = {}; //_initial: ""};
+      var blocks = {_initial: ""};
       var keywrd = "_initial";
       markup.split(/\r?\n/).forEach(function(line) {
           line = line.trimRight();
           var match;
           if (match = line.match(/^\s*---\s+(\S*)\s+---\s*$/)) {
+              delete blocks[keywrd];
               keywrd = match[1];
               blocks[keywrd] = "";
           } else if (line === "") {
