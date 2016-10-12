@@ -6,7 +6,8 @@
     //actualize("d.jlettvin.plot");
 
     d.jlettvin.plot.draw = function(canvasname, lines, shape) {
-        var axisWidth   = shape.font.size + 5;
+        // (apologies for manifest constants)
+        var axisWidth   = shape.font.size + 5 + 10;
         var halfWidth   = axisWidth / 2;
 
         var plotWidth  = shape.width;
@@ -68,7 +69,7 @@
                 ctx.strokeStyle = line.color;
                 ctx.fillStyle = line.color;
                 ctx.beginPath();
-                var xAxis = plotWidth + plotMargin * 2 + n * axisWidth + 10 + halfWidth;
+                var xAxis = plotWidth + plotMargin * 2 + n * axisWidth + halfWidth + 5;
                 ctx.moveTo(xAxis, plotMargin);
                 ctx.lineTo(xAxis, yOffset);
                 ctx.stroke();
