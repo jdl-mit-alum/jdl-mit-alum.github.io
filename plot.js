@@ -9,10 +9,11 @@
         // (apologies for manifest constants)
         
         // Initialize defaults
+        shape = shape || {width:800, height:200};
         shape.font      = shape.font || {size:20};
-        shape.frame     = shape.grid || {color:"#787878"}
+        shape.frame     = shape.grame || {color:"#787878"}
         shape.grid      = shape.grid || {color:"#878787"}
-        shape.margin    = shape.margin || {width:10, color:"#707070"};
+        //shape.margin    = shape.margin || {width:10, color:"#707070"};
 
         var axisWidth   = shape.font.size + 5 + 10;
         var halfWidth   = axisWidth / 2;
