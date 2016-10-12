@@ -7,13 +7,19 @@
 
     d.jlettvin.plot.draw = function(canvasname, lines, shape) {
         // (apologies for manifest constants)
-        shape.font = shape.font || {size:20};
+        
+        // Initialize defaults
+        shape.font      = shape.font || {size:20};
+        shape.frame     = shape.grid || {color:"#787878"}
+        shape.grid      = shape.grid || {color:"#878787"}
+        shape.margin    = shape.margin || {width:10, color:"#707070"};
+
         var axisWidth   = shape.font.size + 5 + 10;
         var halfWidth   = axisWidth / 2;
 
-        var plotWidth  = shape.width;
-        var plotHeight = shape.height;
-        var plotMargin = shape.margin.width;
+        var plotWidth   = shape.width;
+        var plotHeight  = shape.height;
+        var plotMargin  = shape.margin.width;
 
         var frameWidth  = plotWidth  + 2 * plotMargin + axisWidth * lines.length;
         var frameHeight = plotHeight + 2 * plotMargin;
