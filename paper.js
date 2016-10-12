@@ -71,7 +71,6 @@ $(document).ready(function() {
           line = line.trimRight();
           var match;
           if (match = line.match(/^\s*---\s+(\S*)\s+---\s*$/)) {
-              delete blocks[keywrd];
               keywrd = match[1];
               blocks[keywrd] = "";
           } else if (line === "") {
@@ -80,6 +79,7 @@ $(document).ready(function() {
               blocks[keywrd] += line + '\n';
           }
       });
+      delete blocks[keywrd];
       var buffer = "";
       for (key in blocks) {
           if (blocks[key] !== "") buffer += "== " + key + " ==\n" + blocks[key];
