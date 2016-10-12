@@ -22,7 +22,7 @@
     var x = 0;
     var update = function() {
       if (line.data.length > shape.width) line.data = line.data.slice(1);
-      line[0].data.push(Math.sin(x / (5 * Math.PI)));
+      lines[0].data.push(Math.sin(x / (5 * Math.PI)));
       plot(canvasName, lines, shape);
       setTimeout(update, 20);
     };
