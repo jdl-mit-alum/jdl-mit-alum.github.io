@@ -74,6 +74,7 @@ $(document).ready(function() {
           if (match = line.match(/^\s*---\s+(\S*)\s+---\s*$/)) {
               delete blocks[keywrd];
               keywrd = match[1];
+              console.log("!!! FOUND !!! " + keywrd;
               blocks[keywrd] = "";
           } else if (line === "") {
               // Do nothing.
