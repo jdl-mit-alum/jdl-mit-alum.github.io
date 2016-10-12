@@ -69,6 +69,7 @@ $(document).ready(function() {
       var keywrd = "_initial";
       markup.split(/\r?\n/).forEach(function(line) {
           line = line.trimRight();
+          console.log(line);
           var match;
           if (match = line.match(/^\s*---\s+(\S*)\s+---\s*$/)) {
               delete blocks[keywrd];
