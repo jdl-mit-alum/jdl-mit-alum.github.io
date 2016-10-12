@@ -9,7 +9,7 @@
         // (apologies for manifest constants)
         
         // Initialize defaults
-        shape = shape || {width:800, height:200};
+        shape = shape || {width:800, height:201};
         shape.font      = shape.font || {size:20};
         shape.frame     = shape.grame || {color:"#787878"}
         shape.grid      = shape.grid || {color:"#878787"}
