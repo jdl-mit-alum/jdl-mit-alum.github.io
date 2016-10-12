@@ -65,7 +65,7 @@ $(document).ready(function() {
       target.innerHTML = framed;
       var source = document.getElementById("source");
       var markup = source.innerHTML;
-      var blocks = {_initial: ""};
+      var blocks = {}; //_initial: ""};
       var keywrd = "_initial";
       markup.split(/\r?\n/).forEach(function(line) {
           line = line.trimRight();
